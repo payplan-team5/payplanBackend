@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: payplan
+  datasource:
+    url: jdbc:postgresql://host.docker.internal:5432/payplan
+    username: wezxro_user
+    password: testtest
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        default_batch_fetch_size: 100
+      show_sql: true
+      format_sql: true
+
+  config:
+    activate:
+      on-profile: default
